@@ -55,7 +55,7 @@
                             <div class="jp-playlist">
                                 <li class="jp-playlist-current">
                                     <div class="poster">
-                                      <img src="" alt="">
+                                      <img id="current_pic" src="" alt="">
                                     </div>
                                     <div class="details">
                                       <span class="title"></span>
@@ -72,20 +72,22 @@
                             <div class="progress"></div>  <!-- แถบ progress -->
                             <div class="remaining jp-remaining-time">-00:00</div> <!-- เวลาที่เหลือ -->
                           </div>
-                          <div class="play-controls">
+                         <div id="jquery_jplayer" class="jp-jplayer"></div>
+                          <div id= "jpContainer" class="play-controls">
                             <i class="fa-solid fa-backward jp-previous" title="previous"></i>
-                            <i class="fa-solid fa-play jp-play" title="play"></i>
-                            <i class="fa-solid fa-pause jp-pause" title="pause"></i>
+                            <i id="play-btn" class="fa-solid fa-play jp-play" tabindex="1" title="play"></i>
+                            <i class="fa-solid fa-pause jp-pause" tabindex="1" title="pause"></i>
                             <i class="fa-solid fa-forward jp-next" title="next"></i>
                          </div>
                         </div>
-                        <div id="jquery_jplayer" class="jp-jplayer"></div>
                     </div>
-                      <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-                      <script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
-                      <script src='//cdnjs.cloudflare.com/ajax/libs/jplayer/2.6.4/jquery.jplayer/jquery.jplayer.min.js'></script>
-                      <script src='//cdnjs.cloudflare.com/ajax/libs/jplayer/2.6.4/add-on/jplayer.playlist.min.js'></script>
-                      <script src="./script.js"></script>
+
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+                    <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+                    <script src='https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.6.4/jquery.jplayer/jquery.jplayer.min.js'></script>
+                    <script src='https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.6.4/add-on/jplayer.playlist.min.js'></script>
+                    <script src="./player_script.js"></script>
+
                 </div>
                 <section class="sec-treading container-fluid row row-cols-1 py-5 row-cols-lg-4 row-cols-xxl-4 g-4 px-2 align-content-center align-self-center justify-content-center">
                     <div class="scrolltxt container-fluid clearfix mt-5 p-3">
@@ -118,7 +120,7 @@
                 <h1>คุณอาจชอบสิ่งนี้</h1>
                 <div id="recommendationContainer"></div>
     
-                <script src="script.js"></script>
+                <script src="./script.js"></script>
             </div>
             <div class="top-chart">
                 <div class="head_top-chart">
@@ -138,4 +140,5 @@
         </footer>
     </div>
 </body>
+
 </html>
